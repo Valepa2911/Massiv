@@ -4,11 +4,16 @@
 Console.WriteLine("строка массива");
 int mas = Convert.ToInt32 (Console.ReadLine());
 string[] array = new string[mas];
-string[] ar2 = new string[3];
-
-for (int i = 0; i < stringArray.length; i++)
+string[] ar2 = new string[array.Length];
+int count = 0;
+for (int i = 0; i < array.Length; i++)
 {
-    
+    if (array[i].Length<=0)
+    {
+          ar2[count] = array[i];
+          count++;
+    }
+    Console.WriteLine(ar2[count]);
 }
 
 
@@ -17,5 +22,3 @@ for (int i = 0; i < stringArray.length; i++)
 
 
 
-
-//Console.WriteLine(array);
