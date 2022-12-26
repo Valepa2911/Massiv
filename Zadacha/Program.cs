@@ -1,28 +1,39 @@
 ﻿// Написать программу, которая из имеющегося массива строк формирует новый массив из строк, длина которых меньше, либо равна 3 символам.
 // Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. 
 
-string[] array = new string[8] { "14", "hello", "daccc", "2", "777", "dsaFD", "258963", "World" };
+string[] array = { "14", "hello", "d=)", "2", "777", "dsaFD", "258963", "World" };
 string[] ar2 = new string[array.Length];
+int b = 3;
 Vivod(array);
+
 void Vivod(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
+    {
         Console.Write(" " + array[i]);
+    }
+    Console.WriteLine();
 }
-Console.WriteLine();
+
 
 for (int i = 0; i < array.Length; i++)
 {
-    int count = 0;
-    if (array[i].Length <= 3)
+
+
+    if (array[i].Length <= b)
     {
-        ar2[count] = array[i];
-        count++;
-        
+        ar2[i] = array[i];
+
     }
-    Console.WriteLine(ar2[count]);
+    else
+        ar2[i] = String.Empty;
+    Console.Write(" " + ar2[i]);
 
 }
+
+
+
+
 
 
 
